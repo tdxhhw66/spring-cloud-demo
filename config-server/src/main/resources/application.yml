@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 8089
 
 spring:
   application:
@@ -9,7 +9,12 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/tdxhhw66/springcloudconfig.git
-          searchPaths: respo
+          uri: https://github.com/tdxhhw66/springcloudconfig.git/
+          searchPaths: spring-config
 #          username: your username
 #          password: your password
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
